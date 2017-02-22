@@ -37,15 +37,24 @@ API Course, Lesson 1 -->
                 lat: 40.74135,
                 lng: -73.99802
             };
+            // TODO: Create a single marker appearing on initialize -
+            // Create it with the position of the singleLatLng,
+            // on the map, and give it your own title!
+
             var marker = new google.maps.Marker({
                 position: singleLatLng,
                 map: map,
-                title: 'F the World!'
-            });
-            var infowindow = new google.maps.InfoWindow({
-                content: "contentString"
+                title: 'My first Marker'
             });
 
+            // TODO: create a single infowindow, with your own content.
+            // It must appear on the marker
+            //
+            var infowindow = new google.maps.InfoWindow({
+                content: 'here is where I place infowindow text'
+            });
+            // TODO: create an EVENT LISTENER so that the infowindow opens when
+            // the marker is clicked!
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
             });
